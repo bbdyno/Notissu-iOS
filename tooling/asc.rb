@@ -218,7 +218,7 @@ def status(version_string)
   localization = localization_for(version)
   call('get', "/v1/appStoreVersionLocalizations/#{localization['id']}/appScreenshotSets?limit=50")['data'].each do |set|
     shots = call('get', "/v1/appScreenshotSets/#{set['id']}/appScreenshots?limit=50")['data']
-    states = shots.map { |shot| shot['attributes'].dig('assetDeliveryState', 'state') }.tally
+    states = shots.map { |shot| shot['attributes'].dig('assetDeliveryState', 'state') }.group_by(&:itself).transform_values(&:size)
     puts "  #{set['attributes']['screenshotDisplayType']}: #{shots.size}장 #{states}"
   end
 end
