@@ -54,7 +54,7 @@ enum Route: Hashable {
 @MainActor
 @Observable
 final class AppModel {
-    private static let remoteCatalogURL = URL(string: "https://raw.githubusercontent.com/bbdyno/Notissu/master/Packages/NoticeKit/Sources/NoticeKit/Resources/boards.json")!
+    private static let remoteCatalogURL = URL(string: "https://raw.githubusercontent.com/bbdyno/Notissu-iOS/master/Packages/NoticeKit/Sources/NoticeKit/Resources/boards.json")!
     private static var cachedCatalogURL: URL {
         FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0].appendingPathComponent("boards.json")
     }

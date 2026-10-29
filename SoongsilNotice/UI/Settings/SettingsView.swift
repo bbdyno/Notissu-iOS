@@ -100,7 +100,7 @@ struct AboutView: View {
                 Link("문의 메일 보내기", destination: URL(string: "mailto:della.kimko@gmail.com")!)
             }
             Section("만든 곳") {
-                Link("소스 코드 (GitHub)", destination: URL(string: "https://github.com/ju-djangun/Notissu")!)
+                Link("소스 코드 (GitHub)", destination: URL(string: "https://github.com/bbdyno/Notissu-iOS")!)
             }
             Section("오픈소스") {
                 Link("Kanna", destination: URL(string: "https://github.com/tid-kijyun/Kanna")!)
